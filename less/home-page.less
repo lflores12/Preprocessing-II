@@ -8,6 +8,8 @@
 
     img {
       margin-bottom: 20px;
+
+
     }
   }
 
@@ -17,16 +19,31 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media(max-width:510px){
+      flex-direction: column;
+      align-content: center;
+      margin: 0 10px;
+    }
+
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media(max-width: 510px){
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media(max-width:510px){
+        width: 100%;
+        margin-bottom: 10px;
+      }
 
       img {
         border-radius: 10px;
@@ -37,6 +54,10 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media (max-width:510px){
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -70,14 +91,7 @@
     }
 
     .btn {
-      border: 1px solid black;
-      background: teal;
-      border-radius: 15px;
-      width: 80%;
-      text-align: center;
-      font-size: 1.8rem;
-      padding: 12px 20px;
-      color: white;
+      .button-style(teal, 1.6rem, white);
 
     }
   }
